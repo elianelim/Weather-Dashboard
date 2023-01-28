@@ -1,14 +1,19 @@
-.weather-banner {
+.banner {
     background-color: blue;
     height: 50px;
 }
 
-.weather-title {
+.pagetitle {
    font-size: 2em;
    font-weight: bold;
    text-align: center;
    padding-left: 15%;
    color: white;
+}
+
+.searchtitle {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .search-btn {

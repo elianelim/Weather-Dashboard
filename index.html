@@ -16,20 +16,16 @@
 </head>
 
 <body>
-  <div class="row weather-banner">
-    <div class="col"></div>
-    <div class="col"><div class="weather-title">Weather Dashboard</div>
-    
-  </div>
-</div>
+    <div class="row banner"><div class="pagetitle">Weather Dashboard</div>
+    </div>
   
 
     <div class="row search">
       <div class="col-2">
-      <label for="inputEmail4" class="form-label title">Search for a City: </label>
+      <label for="inputSearch" class="form-label searchtitle">Search for a City: </label>
       <br>
-      <input type="text" id="searchInput" class="form-control" placeholder="San Diego"/>
-      <button type="submit" class="btn btn-primary search-btn" onclick="searchCity()">Search</button>
+      <input type="text" id="searchInput" class="form-control" placeholder="Search for your city"/>
+      <button type="submit" class="btn btn-primary search-btn">Search</button>
       
       <hr class="hr"/>
       </div>
@@ -37,7 +33,7 @@
 
     <!--inject JS codes here-->
     <div id="search-history">
-      <button type="submit" class="btn btn-light search-btn2" onclick="SearchApi('Atlanta')">Atlanta</button>
+      <!-- <button type="submit" class="btn btn-light search-btn2" onclick="SearchApi('Atlanta')">Atlanta</button> -->
       <br>
       <button type="submit" class="btn btn-light search-btn2">Search2</button>
       <br>
