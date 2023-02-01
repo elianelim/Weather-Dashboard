@@ -1,32 +1,22 @@
-.pagetitle {
-    background-color: blue;
-    height: 50px;
+h1{
+    color: white;
+    background: linear-gradient(to right, #8486F5, #483475);
 }
 
-.pagetitle {
-   font-size: 2em;
-   font-weight: bold;
-   text-align: center;
-   padding-left: 15%;
-   color: white;
-}
-
-.searchtitle {
-    font-size: 24px;
+h2,h4{
     font-weight: bold;
 }
 
-.search-btn {
-    width: 100%;
-    margin-top: 15px;
+#error{
+    color: red
 }
 
-#search-input {
-    width: 30%;
+#selectedCity{
+    border:1px solid #cecece; 
+    min-height: 200px;
 }
 
-.search-btn2 {
-    width: 15%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+#ind_card{
+    color: white; 
+    background: #555C78
 }

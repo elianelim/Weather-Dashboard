@@ -2,75 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weather Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-    rel="stylesheet" />
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"/>
-    <link rel="stylesheet" href="./assets/style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- import external css -->
+  <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 
 <body>
-    <div class="row"><div class="pagetitle">Weather Dashboard</div>
-    </div>
-  
 
-    <div class="row">
-      <div class="col-2">
-      <label for="inputSearch" class="form-label searchtitle">Search for a City: </label>
-      <br>
-      <input type="text" id="searchInput" class="form-control" placeholder="Search for your city"/>
-      <button type="submit" id="search-button" class="btn btn-primary search-btn">Search</button>
-    </form>
-      <hr class="hr"/>
+  <div class="container-fluid m-0 p-0">
+      <!-- Content here -->
+      <h1 class = "align-middle p-3">Weather Dashboard</h1>
+  </div>
+      <div class="row m-0 p-3">
+          <div class = "col-3 me-3">
+
+              <div class = "row">
+                  <h2 class = "p-0">Search for a City:</h2>
+              </div>
+              
+              <div class = "row">
+                  <div class="input-group p-0 mb-3">
+                      <input type="text" class="form-control" placeholder="San Diego" id="city">
+                  </div>
+              </div>
+
+              <div class = "row">
+                  <button class="btn btn-primary" type="submit" onclick="search()">Search</button>
+                  <span id="error" class ="my-3 p-1"></span>
+                  <!-- Line -->
+                  <hr>
+              </div>
+
+              <div class = "row" id = "cities"></div>
+
+          </div>
+
+          <div class = "col-8">
+              <!-- Container for weather description -->
+              <div class = "row mt-4">
+                  <div class = "container-fluid" id = "selectedCity">
+                      
+                  </div>
+              </div>
+
+              <div class = "row mt-3">
+                  <div class = "row">
+                      <h4 class = "p-0">5-Day Forecast</h4>
+                  </div>
+                  
+                  <div class = "row" id="cards">
+                  </div>
+                  
+              </div>
+
+          </div>
+
       </div>
-    </div>
+  <div>
 
-    <!--inject JS codes here-->
-    <div id="search-history">
-      <!-- <button type="submit" class="btn btn-light search-btn2" onclick="SearchApi('Atlanta')">Atlanta</button> -->
-      <br>
-      <button type="submit" class="btn btn-light search-btn2">Search2</button>
-      <br>
-      <button type="submit" class="btn btn-light search-btn2">Search3</button>
-      <br>
-      <button type="submit" class="btn btn-light search-btn2">Search4</button>
-    </div>
-
-    <div class="col-10">
-      <div class="search-wrapper" id="search-result">
-        <!--inject JS codes here-->
-        <div class="result-box">
-          <div class="city-title">Atlanta (9/13/2022) <img src="http://openweathermap.org/img/wn/11d@2x.png" alt="" width="20" /></div>
-          <div>Temp: 76.62F</div>
-          <div>Wind: 8.43 MPH</div>
-          <div>Humidity: 44%</div>
-        </div>
-      </div>
-    </div>
-    
-
-  
-
-  
+  </div>
 
 
-    
 
 
-  <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+
+<!-- Axios -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!-- External js file -->
   <script src="./assets/style.css"></script>
-</body>
 
+</body>
 </html>
