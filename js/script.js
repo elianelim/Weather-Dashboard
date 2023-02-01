@@ -1,10 +1,5 @@
-var searchInput = document.getElementById('#searchInput');
-var searchButtonEl = document.getElementById('#search-button');
+//countries
+var countries = ["Atlanta", "Denver", "seattle", "San Francisco", "Orlando", "New York", "Chicago", "Austin"]
+//Assigning API key 
+var APIKey = "822415cdef222fbb18ec1a2abbf9c0bc";
 
-
-
-//Assigning API key to const 
-const APIKey = "822415cdef222fbb18ec1a2abbf9c0bc";
-
-searchButtonEl.addEventListener("click", clearCards);
-console.log("hello")
