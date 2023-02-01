@@ -16,17 +16,17 @@
 </head>
 
 <body>
-    <div class="row banner"><div class="pagetitle">Weather Dashboard</div>
+    <div class="row"><div class="pagetitle">Weather Dashboard</div>
     </div>
   
 
-    <div class="row search">
+    <div class="row">
       <div class="col-2">
       <label for="inputSearch" class="form-label searchtitle">Search for a City: </label>
       <br>
       <input type="text" id="searchInput" class="form-control" placeholder="Search for your city"/>
-      <button type="submit" class="btn btn-primary search-btn">Search</button>
-      
+      <button type="submit" id="search-button" class="btn btn-primary search-btn">Search</button>
+    </form>
       <hr class="hr"/>
       </div>
     </div>
@@ -45,6 +45,12 @@
     <div class="col-10">
       <div class="search-wrapper" id="search-result">
         <!--inject JS codes here-->
+        <div class="result-box">
+          <div class="city-title">Atlanta (9/13/2022) <img src="http://openweathermap.org/img/wn/11d@2x.png" alt="" width="20" /></div>
+          <div>Temp: 76.62F</div>
+          <div>Wind: 8.43 MPH</div>
+          <div>Humidity: 44%</div>
+        </div>
       </div>
     </div>
     
