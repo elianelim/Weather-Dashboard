@@ -1,22 +1,22 @@
-h1{
+h1 {
     color: white;
     background: linear-gradient(to right, #8486F5, #483475);
 }
 
-h2,h4{
+h2,h4 {
     font-weight: bold;
 }
 
-#error{
+#error {
     color: red
 }
 
-#selectedCity{
+#selectedCity {
     border:1px solid #cecece; 
     min-height: 200px;
 }
 
-#ind_card{
+#ind_card {
     color: white; 
     background: #555C78
 }
